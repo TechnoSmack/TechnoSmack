@@ -1,0 +1,48 @@
+{
+  "starred": false,
+  "viewers_can_download": true,
+  "editors_can_edit_access": true,
+  "last_modified_by_any_user": "2020-12-26T16:43:40Z",
+  "last_modified_by_me": "2020-12-26T16:43:40Z",
+  "content_last_modified": "2020-12-26T16:43:40Z",
+  "created": "2020-12-26T16:43:40.961Z",
+  "permissions": [
+    {
+      "id": "06134057987089063321",
+      "name": "Anthony Dibble",
+      "type": "user",
+      "role": "writer",
+      "kind": "drive#permission",
+      "photo_link": "https://lh3.googleusercontent.com/a/default-user=s64",
+      "self_link": "https://www.googleapis.com/drive/v2/files/1Dhs8zcq4ffZAzEE8wTsUJDqZNres3mdI/permissions/06134057987089063321",
+      "email_address": "adibble@bravofederal.com",
+      "domain": "bravofederal.com",
+      "etag": "\"43a0OCYVuKNeOWfRYUASdLKUoqw\"",
+      "deleted": false,
+      "pending_owner": false
+    },
+    {
+      "id": "anyoneWithLink",
+      "type": "anyone",
+      "role": "reader",
+      "kind": "drive#permission",
+      "with_link": true,
+      "self_link": "https://www.googleapis.com/drive/v2/files/1Dhs8zcq4ffZAzEE8wTsUJDqZNres3mdI/permissions/anyoneWithLink",
+      "etag": "\"8e9CEqREqRPhaU9QvE974F65_Dc\""
+    },
+    {
+      "id": "03410585664759572372",
+      "name": "Anthony Dibble",
+      "type": "user",
+      "role": "owner",
+      "kind": "drive#permission",
+      "photo_link": "https://lh3.googleusercontent.com/a/default-user=s64",
+      "self_link": "https://www.googleapis.com/drive/v2/files/1Dhs8zcq4ffZAzEE8wTsUJDqZNres3mdI/permissions/03410585664759572372",
+      "email_address": "adibble@digisol.dev",
+      "domain": "digisol.dev",
+      "etag": "\"3HY4okGkmyk4V32QhGBSUQMUBoE\"",
+      "deleted": false,
+      "pending_owner": false
+    }
+  ]
+}

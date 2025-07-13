@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Henry Rao
+N:Rao;Henry;;;
+item1.EMAIL;TYPE=INTERNET:sale@uniwell-power.com
+item1.X-ABLabel:
+item2.TEL:+86 152 8006 0061
+item2.X-ABLabel:
+item3.ORG:Uniwell Power
+item3.X-ABLabel:
+CATEGORIES:Power Storage,myContacts
+END:VCARD
