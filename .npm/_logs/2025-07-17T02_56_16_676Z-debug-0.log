@@ -1,0 +1,19 @@
+0 verbose cli /usr/bin/node /usr/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.19.2
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/user/eslint/.npmrc
+5 silly config load:file:/home/user/.npmrc
+6 silly config load:file:/usr/etc/npmrc
+7 verbose title npm exec eslint tmp_project_directory --ext .js,.jsx,.css,.json,.html --fix
+8 verbose argv "exec" "--" "eslint" "tmp_project_directory" "--ext" ".js,.jsx,.css,.json,.html" "--fix"
+9 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2025-07-17T02_56_16_676Z-
+10 verbose logfile /home/user/.npm/_logs/2025-07-17T02_56_16_676Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd /home/user/eslint
+14 verbose os Linux 6.1.102
+15 verbose node v20.19.2
+16 verbose npm  v10.8.2
+17 verbose exit 0
+18 info ok
