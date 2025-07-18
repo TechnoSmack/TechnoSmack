@@ -164,7 +164,7 @@ main {
 .hero-section {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
-              url('../images/green-fire-bg.jpg') center/cover no-repeat;
+              url('../images/background.gif') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
