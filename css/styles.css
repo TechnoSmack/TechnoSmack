@@ -180,7 +180,7 @@ header {
     .nav-menu {
         display: none;
         flex-direction: column;
-        background: #fff;
+        background: var(--color-accent-green); /* Use the green theme color */
         position: absolute;
         top: 70px;
         right: 0;
@@ -196,6 +196,15 @@ header {
     }
     .nav-container {
         position: relative;
+    }
+    .nav-menu li a {
+        color: var(--color-primary-black); /* Make links readable on green */
+    }
+    .nav-menu li a:hover,
+    .nav-menu li a:focus,
+    .nav-menu li a.active {
+        background: rgba(0,0,0,0.08);
+        color: var(--color-dark-charcoal);
     }
 }
 
