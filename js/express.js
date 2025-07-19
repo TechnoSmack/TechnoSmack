@@ -16,13 +16,18 @@ app.post('/contact', (req, res) => {
     }
   });
   const mailOptions = {
-    from: email,
+    from: 'admin@h2ointernational.org',
     to: 'support@technosmack.com',
+    replyTo: email,
     subject: `Contact Form: ${name}`,
     text: message
   };
   transporter.sendMail(mailOptions, (error, info) => {
-    if (error) return res.status(500).send('Error');
+    if (error) {
+      console.error('Nodemailer error:', error); // Log the error
+      return res.status(500).send('Error sending email: ' + error.message);
+    }
+    console.log('Email sent:', info.response); // Log success
     res.send('Message sent!');
   });
 });
