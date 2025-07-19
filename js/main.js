@@ -13,6 +13,7 @@
         initializeScrollEffects();
         initializePerformanceOptimizations();
         initializeMobileNavigation();
+        initializeContactFormSubmission();
     });
 
     /**
@@ -215,6 +216,44 @@
         if (navToggle && navMenu) {
             navToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
+            });
+        }
+    }
+
+    /**
+     * Contact Form Submission
+     * Handles AJAX submission of the contact form
+     */
+    function initializeContactFormSubmission() {
+        const contactForm = document.querySelector('.contact-form form');
+        const successMessage = document.getElementById('form-success-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(contactForm);
+
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                      'Accept': 'application/json'
+                    }
+                  }).then(response => {
+                    if (response.ok) {
+                      contactForm.reset();
+                      successMessage.style.display = 'block';
+                    } else {
+                      successMessage.style.display = 'block';
+                      successMessage.textContent = 'Sorry, there was a problem sending your message.';
+                      successMessage.style.color = 'red';
+                    }
+                  }).catch(() => {
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = 'Sorry, there was a problem sending your message.';
+                    successMessage.style.color = 'red';
+                  });
             });
         }
     }
