@@ -138,54 +138,8 @@
             validateField(messageInput, isValidMessage, 'Message must be at least 10 characters long');
         });
 
-        // Form submission handling
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        
 
-            // Validate all fields
-            const isNameValid = validateField(nameInput, isValidName, 'Please enter a valid name');
-            const isEmailValid = validateField(emailInput, isValidEmail, 'Please enter a valid email address');
-            const isMessageValid = validateField(messageInput, isValidMessage, 'Message must be at least 10 characters long');
-
-            if (isNameValid && isEmailValid && isMessageValid) {
-                // Send form data to server using fetch
-                fetch('/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: `name=${encodeURIComponent(nameInput.value)}&email=${encodeURIComponent(emailInput.value)}&message=${encodeURIComponent(messageInput.value)}`
-                })
-                .then(response => {
-                    if (response.ok) {
-                        submitButton.textContent = 'Message Sent!';
-                        submitButton.style.background = 'var(--color-accent-green)';
-                        submitButton.disabled = true;
-                        contactForm.reset();
-                        setTimeout(() => {
-                            submitButton.textContent = 'Send Message';
-                            submitButton.style.background = '';
-                            submitButton.disabled = false;
-                        }, 3000);
-                    } else {
-                        submitButton.textContent = 'Error!';
-                        submitButton.style.background = 'red';
-                        setTimeout(() => {
-                            submitButton.textContent = 'Send Message';
-                            submitButton.style.background = '';
-                        }, 3000);
-                    }
-                })
-                .catch(() => {
-                    submitButton.textContent = 'Error!';
-                    submitButton.style.background = 'red';
-                    setTimeout(() => {
-                        submitButton.textContent = 'Send Message';
-                        submitButton.style.background = '';
-                    }, 3000);
-                });
-            }
-        });
     }
 
     /**
