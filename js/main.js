@@ -12,6 +12,7 @@
         initializeFormValidation();
         initializeScrollEffects();
         initializePerformanceOptimizations();
+        initializeMobileNavigation();
     });
 
     /**
@@ -238,6 +239,18 @@
         });
     }
 
-
+    /**
+     * Mobile Navigation Enhancement
+     * Toggles navigation menu on mobile devices
+     */
+    function initializeMobileNavigation() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+    }
 
 })();

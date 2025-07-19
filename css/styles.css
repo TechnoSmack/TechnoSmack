@@ -155,6 +155,50 @@ header {
   background: rgba(0, 255, 136, 0.1);
 }
 
+/* Add these styles for responsive nav */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.nav-toggle .bar {
+    width: 28px;
+    height: 4px;
+    background: #222;
+    margin: 4px 0;
+    border-radius: 2px;
+    display: block;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 100;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-container {
+        position: relative;
+    }
+}
+
 /* Main Content */
 main {
   margin-top: 80px; /* Account for fixed header */
