@@ -141,36 +141,48 @@
         // Form submission handling
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Validate all fields
             const isNameValid = validateField(nameInput, isValidName, 'Please enter a valid name');
             const isEmailValid = validateField(emailInput, isValidEmail, 'Please enter a valid email address');
             const isMessageValid = validateField(messageInput, isValidMessage, 'Message must be at least 10 characters long');
-            
+
             if (isNameValid && isEmailValid && isMessageValid) {
-                // Show success feedback
-                submitButton.textContent = 'Message Sent!';
-                submitButton.style.background = 'var(--color-accent-green)';
-                submitButton.disabled = true;
-                
-                // Reset form after delay
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitButton.textContent = 'Send Message';
-                    submitButton.style.background = '';
-                    submitButton.disabled = false;
-                    
-                    // Reset field styles
-                    [nameInput, emailInput, messageInput].forEach(field => {
-                        field.style.borderColor = '';
-                    });
-                }, 3000);
-                
-                // In a real implementation, you would send the form data to a server
-                console.log('Form submitted successfully:', {
-                    name: nameInput.value,
-                    email: emailInput.value,
-                    message: messageInput.value
+                // Send form data to server using fetch
+                fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `name=${encodeURIComponent(nameInput.value)}&email=${encodeURIComponent(emailInput.value)}&message=${encodeURIComponent(messageInput.value)}`
+                })
+                .then(response => {
+                    if (response.ok) {
+                        submitButton.textContent = 'Message Sent!';
+                        submitButton.style.background = 'var(--color-accent-green)';
+                        submitButton.disabled = true;
+                        contactForm.reset();
+                        setTimeout(() => {
+                            submitButton.textContent = 'Send Message';
+                            submitButton.style.background = '';
+                            submitButton.disabled = false;
+                        }, 3000);
+                    } else {
+                        submitButton.textContent = 'Error!';
+                        submitButton.style.background = 'red';
+                        setTimeout(() => {
+                            submitButton.textContent = 'Send Message';
+                            submitButton.style.background = '';
+                        }, 3000);
+                    }
+                })
+                .catch(() => {
+                    submitButton.textContent = 'Error!';
+                    submitButton.style.background = 'red';
+                    setTimeout(() => {
+                        submitButton.textContent = 'Send Message';
+                        submitButton.style.background = '';
+                    }, 3000);
                 });
             }
         });
