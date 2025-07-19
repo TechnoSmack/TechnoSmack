@@ -159,57 +159,58 @@ aria-labelledby="contact-title"
                             </p>
                         </address>
                     </div>
-                    <div class="contact-form">
-                        <h3>Send us a Message</h3>
-                        <form
-action="/contact"
-method="post"
-class="message-form"
-aria-label="Contact form"
->
-                            <div class="form-group">
-                                <label for="name">Name <span class="required" aria-label="required">*</span></label>
-                                <input
-type="text"
-id="name"
-name="name"
-required
-aria-required="true"
-aria-describedby="name-help"
->
-                                <small id="name-help" class="form-help">Please enter your full name</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email <span class="required" aria-label="required">*</span></label>
-                                <input
-type="email"
-id="email"
-name="email"
-required
-aria-required="true"
-aria-describedby="email-help"
->
-                                <small id="email-help" class="form-help">We'll use this to respond to your message</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message <span class="required" aria-label="required">*</span></label>
-                                <textarea
-id="message"
-name="message"
-rows="5"
-required
-aria-required="true"
-aria-describedby="message-help"
-></textarea>
-                                <small id="message-help" class="form-help">Tell us how we can help you</small>
-                            </div>
-                            <button
-type="submit"
-class="submit-button"
-aria-label="Send message"
->Send Message</button>
-                        </form>
-                    </div>
+                    <!-- Contact Formspree Form -->
+<div class="contact-form">
+    <h3>Send us a Message</h3>
+    <form
+      action="https://formspree.io/f/mjkokqaq"
+      method="POST"
+      class="message-form"
+      aria-label="Contact form"
+    >
+        <div class="form-group">
+            <label for="name">Name <span class="required" aria-label="required">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+              aria-describedby="name-help"
+            >
+            <small id="name-help" class="form-help">Please enter your full name</small>
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span class="required" aria-label="required">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              aria-describedby="email-help"
+            >
+            <small id="email-help" class="form-help">We'll use this to respond to your message</small>
+        </div>
+        <div class="form-group">
+            <label for="message">Message <span class="required" aria-label="required">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+              aria-describedby="message-help"
+            ></textarea>
+            <small id="message-help" class="form-help">Tell us how we can help you</small>
+        </div>
+        <button
+          type="submit"
+          class="submit-button"
+          aria-label="Send message"
+        >Send Message</button>
+    </form>
+</div>
                 </article>
             </div>
         </section>
